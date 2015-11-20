@@ -24,6 +24,8 @@
         
         self.thumWidth = 5;
         self.thumHeight = 5;
+        self.thumsDistance = 5;
+        
         self.cornerValue = 2.5;
     }
     return self;
@@ -67,19 +69,18 @@
 }
 
 - (void)layoutSubviews {
-    CGFloat thumsDistance = 5;
-    CGFloat maxThumWidth = (self.frame.size.width - (thumsDistance * (self.numberOfPages + 1))) / self.numberOfPages;
+    CGFloat maxThumWidth = (self.frame.size.width - (self.thumsDistance * (self.numberOfPages + 1))) / self.numberOfPages;
     if (self.thumWidth > maxThumWidth) {
         self.thumWidth = maxThumWidth;
     }
     if (self.thumHeight > self.frame.size.height) {
         self.thumHeight = self.frame.size.height;
     }
-    CGFloat leftSpaceToSuperView = (self.frame.size.width - self.thumWidth * self.numberOfPages - thumsDistance * (self.numberOfPages - 1)) / 2;
+    CGFloat leftSpaceToSuperView = (self.frame.size.width - self.thumWidth * self.numberOfPages - self.thumsDistance * (self.numberOfPages - 1)) / 2;
     CGFloat topSpaceToSuperView = (self.frame.size.height - self.thumHeight) / 2;
     for (int i = 0;i < self.numberOfPages;i++) {
         UIImageView *imageView = (UIImageView *)[self.subviews objectAtIndex:i];
-        imageView.frame = CGRectMake(leftSpaceToSuperView + (thumsDistance + self.thumWidth) * i, topSpaceToSuperView, self.thumWidth, self.thumHeight);
+        imageView.frame = CGRectMake(leftSpaceToSuperView + (self.thumsDistance + self.thumWidth) * i, topSpaceToSuperView, self.thumWidth, self.thumHeight);
         imageView.layer.cornerRadius = self.cornerValue;
         imageView.layer.masksToBounds = YES;
         

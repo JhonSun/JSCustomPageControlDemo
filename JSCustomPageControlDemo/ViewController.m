@@ -61,6 +61,7 @@
         _myPageControl.currentImage = [UIImage imageNamed:@"pageControl_currentImage"];
         _myPageControl.thumImage = [UIImage imageNamed:@"pageControl_thumImage"];
         _myPageControl.numberOfPages = self.pageNumbers;
+        _myPageControl.thumsDistance = 20;
     }
     return _myPageControl;
 }

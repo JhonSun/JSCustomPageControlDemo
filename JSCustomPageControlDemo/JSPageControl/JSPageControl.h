@@ -21,6 +21,7 @@
 
 @property (nonatomic, assign) CGFloat thumWidth;//默认为5
 @property (nonatomic, assign) CGFloat thumHeight;//默认为5
+@property (nonatomic, assign) CGFloat thumsDistance;//间距，默认为5
 
 @property (nonatomic, assign) CGFloat cornerValue;//默认为2.5
 
