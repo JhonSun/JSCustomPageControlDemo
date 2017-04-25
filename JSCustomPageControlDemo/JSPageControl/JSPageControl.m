@@ -42,6 +42,8 @@
                 self.cornerValue = 0;
             } else {
                 dot.backgroundColor = self.currentPageTintColor;
+                dot.layer.borderColor = self.currentBorderColor.CGColor;
+                dot.layer.borderWidth = self.currentborderWidth;
             }
             
         } else {
@@ -50,6 +52,8 @@
                 self.cornerValue = 0;
             } else {
                 dot.backgroundColor = self.thumPageTintColor;
+                dot.layer.borderColor = self.thumBorderColor.CGColor;
+                dot.layer.borderWidth = self.thumborderWidth;
             }
             
         }

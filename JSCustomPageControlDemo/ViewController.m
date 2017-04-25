@@ -56,12 +56,20 @@
 - (JSPageControl *)myPageControl {
     if (!_myPageControl) {
         _myPageControl = [[JSPageControl alloc] init];
-        _myPageControl.thumWidth = [UIImage imageNamed:@"pageControl_currentImage"].size.width;
-        _myPageControl.thumHeight = [UIImage imageNamed:@"pageControl_currentImage"].size.height;
-        _myPageControl.currentImage = [UIImage imageNamed:@"pageControl_currentImage"];
-        _myPageControl.thumImage = [UIImage imageNamed:@"pageControl_thumImage"];
-        _myPageControl.numberOfPages = self.pageNumbers;
+//        _myPageControl.thumWidth = [UIImage imageNamed:@"pageControl_currentImage"].size.width;
+//        _myPageControl.thumHeight = [UIImage imageNamed:@"pageControl_currentImage"].size.height;
+//        _myPageControl.currentImage = [UIImage imageNamed:@"pageControl_currentImage"];
+//        _myPageControl.thumImage = [UIImage imageNamed:@"pageControl_thumImage"];
+        _myPageControl.thumWidth = 9;
+        _myPageControl.thumHeight = 9;
         _myPageControl.thumsDistance = 20;
+        _myPageControl.currentPageTintColor = [UIColor blueColor];
+        _myPageControl.thumPageTintColor = [UIColor whiteColor];
+        _myPageControl.cornerValue = 9 / 2;
+        _myPageControl.thumborderWidth = 2;
+        _myPageControl.thumBorderColor = [UIColor blueColor];
+        _myPageControl.numberOfPages = self.pageNumbers;
+        
     }
     return _myPageControl;
 }

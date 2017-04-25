@@ -23,6 +23,11 @@
 @property (nonatomic, assign) CGFloat thumHeight;//默认为5
 @property (nonatomic, assign) CGFloat thumsDistance;//间距，默认为5
 
-@property (nonatomic, assign) CGFloat cornerValue;//默认为2.5
+@property (nonatomic, assign) CGFloat cornerValue;//圆角，默认为2.5
+
+@property (nonatomic, assign) CGFloat thumborderWidth;//边框宽度，默认为0
+@property (nonatomic, strong) UIColor *thumBorderColor;//边框颜色
+@property (nonatomic, assign) CGFloat currentborderWidth;
+@property (nonatomic, strong) UIColor *currentBorderColor;
 
 @end
